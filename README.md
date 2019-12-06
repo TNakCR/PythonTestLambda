@@ -32,6 +32,10 @@ aws --profile ansibleaws-c4-dev --region us-west-2 s3 sync /tmp/upload/ s3://chr
 
 ====================
 
+https://pypi.org/project/pandas/#files
+
+https://pypi.org/project/s3fs/#files
+
 numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl
 unzip numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl
 pandas-0.25.3-cp37-cp37m-manylinux1_x86_64.whl

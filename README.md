@@ -28,3 +28,13 @@ aws --profile ansibleaws-c4-dev  lambda  delete-function --function-name test-la
 =================
 
 aws --profile ansibleaws-c4-dev --region us-west-2 s3 sync /tmp/upload/ s3://chromeriver-lambdarepo-c4-dev
+
+
+====================
+
+numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl
+unzip numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl
+pandas-0.25.3-cp37-cp37m-manylinux1_x86_64.whl
+unzip pandas-0.25.3-cp37-cp37m-manylinux1_x86_64.whl
+s3fs-0.4.0-py3-none-any.whl
+unzip s3fs-0.4.0-py3-none-any.whl

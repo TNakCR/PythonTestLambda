@@ -37,8 +37,14 @@ https://pypi.org/project/pandas/#files
 https://pypi.org/project/s3fs/#files
 
 numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl
+
 unzip numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl
+
 pandas-0.25.3-cp37-cp37m-manylinux1_x86_64.whl
+
 unzip pandas-0.25.3-cp37-cp37m-manylinux1_x86_64.whl
+
 s3fs-0.4.0-py3-none-any.whl
+
 unzip s3fs-0.4.0-py3-none-any.whl
+

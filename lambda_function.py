@@ -1,7 +1,7 @@
 import boto3
 import pymysql
 import pandas as pd
-from sqlalchemy import create_engine
+import sqlalchemy as db
 
 def lambda_handler(event, context):
   pd.set_option('display.max_rows', 500)
@@ -13,7 +13,14 @@ def lambda_handler(event, context):
   df = pd.read_csv(path)
   print (df[:100])
 
-  engine = create_engine('mysql+pymysql://cr_tester:ch2goAvaTWQa@c4-dev-navigatordb-0.cemtanyak0jn.us-west-2.rds.amazonaws.com/chrome_navigator')
+  engine = db.create_engine('mysql+pymysql://cr_tester:ch2goAvaTWQa@c4-dev-navigatordb-0.cemtanyak0jn.us-west-2.rds.amazonaws.com/chrome_navigator')
+  connection = engine.connect()
+  metadata = db.MetaData()
+  flyway_schema_history = db.Table('flyway_schema_history', metadata, autoload=True, autoload_with=engine)
+  # Print the column names
+  print(flyway_schema_history.columns.keys())
+  # Print full table metadata
+  print(repr(metadata.tables['flyway_schema_history']))
 
   #with engine.connect() as conn, conn.begin():
   #df.to_sql('sales102',conn, if_exists='append', index=False)
@@ -21,3 +28,4 @@ def lambda_handler(event, context):
   return {
         'statusCode': 200,
   }
+
